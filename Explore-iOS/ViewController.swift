@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func randomizeButtonPressed(_ sender: Any) {
+        //Yelp Call Here
+        YelpClient.sharedInstance.getYelpToken { result in
+            switch result {
+            case .Success(_):break
+            case .Failure(let error):
+                print(error)
+                break
+            }
+            
+        }
+    }
 }
 

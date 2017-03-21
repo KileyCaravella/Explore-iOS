@@ -14,6 +14,12 @@
 		5763E4871E8179D200D1DE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5763E4851E8179D200D1DE0F /* LaunchScreen.storyboard */; };
 		5763E4921E8179D200D1DE0F /* Explore_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E4911E8179D200D1DE0F /* Explore_iOSTests.swift */; };
 		5763E49D1E8179D200D1DE0F /* Explore_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E49C1E8179D200D1DE0F /* Explore_iOSUITests.swift */; };
+		57D48C641E81E479003834E1 /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C5E1E81E479003834E1 /* YelpBusiness.swift */; };
+		57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */; };
+		57D48C661E81E479003834E1 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C601E81E479003834E1 /* YelpClient.swift */; };
+		57D48C671E81E479003834E1 /* YelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C611E81E479003834E1 /* YelpTableViewCell.swift */; };
+		57D48C681E81E479003834E1 /* YelpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57D48C621E81E479003834E1 /* YelpTableViewCell.xib */; };
+		57D48C691E81E479003834E1 /* YelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C631E81E479003834E1 /* YelpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		5763E4981E8179D200D1DE0F /* Explore-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Explore-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5763E49C1E8179D200D1DE0F /* Explore_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore_iOSUITests.swift; sourceTree = "<group>"; };
 		5763E49E1E8179D200D1DE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D48C5E1E81E479003834E1 /* YelpBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
+		57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessLocation.swift; sourceTree = "<group>"; };
+		57D48C601E81E479003834E1 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		57D48C611E81E479003834E1 /* YelpTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpTableViewCell.swift; sourceTree = "<group>"; };
+		57D48C621E81E479003834E1 /* YelpTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YelpTableViewCell.xib; sourceTree = "<group>"; };
+		57D48C631E81E479003834E1 /* YelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		5763E47B1E8179D200D1DE0F /* Explore-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				57D48C6A1E81E484003834E1 /* Yelp */,
 				5763E47C1E8179D200D1DE0F /* AppDelegate.swift */,
 				5763E47E1E8179D200D1DE0F /* ViewController.swift */,
 				5763E4801E8179D200D1DE0F /* Main.storyboard */,
@@ -123,6 +136,19 @@
 				5763E49E1E8179D200D1DE0F /* Info.plist */,
 			);
 			path = "Explore-iOSUITests";
+			sourceTree = "<group>";
+		};
+		57D48C6A1E81E484003834E1 /* Yelp */ = {
+			isa = PBXGroup;
+			children = (
+				57D48C5E1E81E479003834E1 /* YelpBusiness.swift */,
+				57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */,
+				57D48C601E81E479003834E1 /* YelpClient.swift */,
+				57D48C611E81E479003834E1 /* YelpTableViewCell.swift */,
+				57D48C621E81E479003834E1 /* YelpTableViewCell.xib */,
+				57D48C631E81E479003834E1 /* YelpViewController.swift */,
+			);
+			name = Yelp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +261,7 @@
 				5763E4871E8179D200D1DE0F /* LaunchScreen.storyboard in Resources */,
 				5763E4841E8179D200D1DE0F /* Assets.xcassets in Resources */,
 				5763E4821E8179D200D1DE0F /* Main.storyboard in Resources */,
+				57D48C681E81E479003834E1 /* YelpTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D48C661E81E479003834E1 /* YelpClient.swift in Sources */,
+				57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */,
+				57D48C641E81E479003834E1 /* YelpBusiness.swift in Sources */,
+				57D48C671E81E479003834E1 /* YelpTableViewCell.swift in Sources */,
 				5763E47F1E8179D200D1DE0F /* ViewController.swift in Sources */,
+				57D48C691E81E479003834E1 /* YelpViewController.swift in Sources */,
 				5763E47D1E8179D200D1DE0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +537,7 @@
 				5763E4A31E8179D200D1DE0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5763E4A41E8179D200D1DE0F /* Build configuration list for PBXNativeTarget "Explore-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +546,7 @@
 				5763E4A61E8179D200D1DE0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5763E4A71E8179D200D1DE0F /* Build configuration list for PBXNativeTarget "Explore-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +555,7 @@
 				5763E4A91E8179D200D1DE0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
