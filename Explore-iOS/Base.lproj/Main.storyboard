@@ -23,29 +23,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpB-m8-LHy">
-                                <rect key="frame" x="16" y="172" width="343" height="30"/>
-                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="144" width="343" height="165"/>
+                                <color key="backgroundColor" red="0.41297743059999997" green="0.0" blue="0.41285100829999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="8LN-Ah-7Df"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
                                 <state key="normal" title="RANDOMIZE">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.83370817549999998" green="0.83370817549999998" blue="0.83370817549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="randomizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKh-DD-rjy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8x8-cL-0T1">
+                                <rect key="frame" x="16" y="393" width="343" height="165"/>
+                                <color key="backgroundColor" red="0.41297743059999997" green="0.0" blue="0.41285100829999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="qoY-Rd-dh3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                <state key="normal" title="BUCKET LIST">
+                                    <color key="titleColor" red="0.83370817549999998" green="0.83370817549999998" blue="0.83370817549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHF-Bz-HsA"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Places Around You!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL1-cz-deO">
-                                <rect key="frame" x="94" y="143" width="186" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="79" y="112" width="217" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by Bucket List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIE-Jk-eCX">
+                                <rect key="frame" x="99" y="361" width="176" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB9-Uc-vm2">
+                                <rect key="frame" x="177" y="326" width="21" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="FpB-m8-LHy" secondAttribute="trailing" id="FZ0-fL-JN4"/>
-                            <constraint firstItem="UL1-cz-deO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="123" id="Qht-8P-C9s"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="FpB-m8-LHy" secondAttribute="leading" id="c4y-GG-yPS"/>
+                            <constraint firstItem="gB9-Uc-vm2" firstAttribute="top" secondItem="FpB-m8-LHy" secondAttribute="bottom" constant="17" id="3Hw-WC-5HF"/>
+                            <constraint firstItem="NIE-Jk-eCX" firstAttribute="top" secondItem="gB9-Uc-vm2" secondAttribute="bottom" constant="17" id="6kZ-7F-8D6"/>
+                            <constraint firstItem="gB9-Uc-vm2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D0Q-ey-TH9"/>
+                            <constraint firstItem="NIE-Jk-eCX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KcC-2O-Ee4"/>
+                            <constraint firstItem="FpB-m8-LHy" firstAttribute="top" secondItem="UL1-cz-deO" secondAttribute="bottom" constant="8" symbolic="YES" id="N5J-us-CwC"/>
+                            <constraint firstItem="FpB-m8-LHy" firstAttribute="centerX" secondItem="UL1-cz-deO" secondAttribute="centerX" id="QAf-1m-xoG"/>
+                            <constraint firstItem="FpB-m8-LHy" firstAttribute="trailing" secondItem="8x8-cL-0T1" secondAttribute="trailing" id="QAk-Up-bUd"/>
+                            <constraint firstItem="UL1-cz-deO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="Qht-8P-C9s"/>
+                            <constraint firstItem="FpB-m8-LHy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dQI-Px-GJT"/>
                             <constraint firstItem="UL1-cz-deO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJt-iP-1xE"/>
-                            <constraint firstItem="FpB-m8-LHy" firstAttribute="top" secondItem="UL1-cz-deO" secondAttribute="bottom" constant="8" id="kbl-Kj-TIV"/>
+                            <constraint firstItem="FpB-m8-LHy" firstAttribute="leading" secondItem="8x8-cL-0T1" secondAttribute="leading" id="mdD-ad-513"/>
+                            <constraint firstItem="8x8-cL-0T1" firstAttribute="top" secondItem="NIE-Jk-eCX" secondAttribute="bottom" constant="8" id="s6n-ah-4ue"/>
                         </constraints>
                     </view>
                 </viewController>
