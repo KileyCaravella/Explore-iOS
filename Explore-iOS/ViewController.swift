@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func randomizeButtonPressed(_ sender: Any) {
         //Yelp Call Here
-        YelpClient.sharedInstance.getYelpToken { result in
+        YelpClient.sharedInstance.searchYelpBusinesses(withLatitude: 37.786882, andLongitude: -122.399972) { result in
             switch result {
             case .Success(_):break
             case .Failure(let error):
