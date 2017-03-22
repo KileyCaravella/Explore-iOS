@@ -53,5 +53,67 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Yelp View Controller-->
+        <scene sceneID="Ixt-Zn-9sN">
+            <objects>
+                <viewController storyboardIdentifier="yelpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vgP-Dw-fso" customClass="YelpViewController" customModule="Explore_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwR-i3-mef"/>
+                        <viewControllerLayoutGuide type="bottom" id="biV-hT-z5W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jkk-EZ-uOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Returned Yelp Businesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btm-Az-p6b">
+                                <rect key="frame" x="0.0" y="28" width="375" height="48"/>
+                                <color key="backgroundColor" red="0.41297743055555558" green="0.0" blue="0.41285100833789062" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="xcy-cv-4Qu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="0.87622316919191923" green="0.87622316919191923" blue="0.87622316919191923" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBf-7M-zmL">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa9-gH-i23">
+                                <rect key="frame" x="-3" y="28" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Xg7-Bv-aPj"/>
+                                    <constraint firstAttribute="width" constant="48" id="d3b-vV-Wq3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.8337081755050505" green="0.8337081755050505" blue="0.8337081755050505" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="vgP-Dw-fso" eventType="touchUpInside" id="lM4-Li-tmr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="btm-Az-p6b" firstAttribute="top" secondItem="hwR-i3-mef" secondAttribute="bottom" constant="8" id="3bj-CE-Nbc"/>
+                            <constraint firstItem="btm-Az-p6b" firstAttribute="leading" secondItem="Jkk-EZ-uOZ" secondAttribute="leadingMargin" constant="-16" id="4Mq-da-jLg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iBf-7M-zmL" secondAttribute="trailing" constant="-16" id="GGy-i6-fCX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="btm-Az-p6b" secondAttribute="trailing" constant="-16" id="Ih0-pf-oha"/>
+                            <constraint firstItem="iBf-7M-zmL" firstAttribute="leading" secondItem="Jkk-EZ-uOZ" secondAttribute="leadingMargin" constant="-16" id="LWX-qO-iCU"/>
+                            <constraint firstItem="qa9-gH-i23" firstAttribute="top" secondItem="btm-Az-p6b" secondAttribute="bottom" constant="-48" id="V7G-vo-YZC"/>
+                            <constraint firstItem="iBf-7M-zmL" firstAttribute="top" secondItem="btm-Az-p6b" secondAttribute="bottom" id="ogM-CI-qGX"/>
+                            <constraint firstItem="biV-hT-z5W" firstAttribute="top" secondItem="iBf-7M-zmL" secondAttribute="bottom" id="rHB-zQ-zse"/>
+                            <constraint firstItem="btm-Az-p6b" firstAttribute="leading" secondItem="qa9-gH-i23" secondAttribute="trailing" constant="-45" id="vcv-le-Ukv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="yelpTableView" destination="iBf-7M-zmL" id="Z18-iF-Ter"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kA2-ET-9Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="174.96251874062969"/>
+        </scene>
     </scenes>
 </document>

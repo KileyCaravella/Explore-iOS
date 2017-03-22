@@ -29,6 +29,7 @@ class YelpBusiness {
         reviewCount = js["review_count"] as? Int ?? 0
         rating = js["rating"] as? Double ?? 0.0
         distance = js["distance"] as? Double ?? 0.0
+        distance *= 0.000621371 //changes distance from meters to miles
         categories = js["categories"] as? [String:Any] ?? [:]
         url = js["url"] as? String ?? ""
         phone = js["phone"] as? String ?? ""
