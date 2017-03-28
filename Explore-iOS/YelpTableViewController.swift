@@ -8,21 +8,26 @@
 
 import UIKit
 
-protocol YelpViewControllerDelegate: class {
+protocol YelpTableViewControllerDelegate: class {
     func didRequestToDismissYelpViewController(sender: UIViewController)
 }
 
-class YelpViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YelpTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var yelpTableView: UITableView!
     
     var yelpBusinessArray: [YelpBusiness] = []
-    var delegate: YelpViewControllerDelegate?
+    var delegate: YelpTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationController()
         setupTableView()
         yelpBusinessArray.sort{$0.distance < $1.distance}
+    }
+    
+    func setupNavigationController() {
+        navigationItem.title = "Yelp Results"
     }
     
     func setupTableView() {
@@ -32,9 +37,13 @@ class YelpViewController: UIViewController, UITableViewDelegate, UITableViewData
         yelpTableView.register(UINib(nibName: "YelpTableViewCell", bundle: nil), forCellReuseIdentifier: "yelpCell")
     }
     
+    //MARK: - Delegate calls
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         delegate?.didRequestToDismissYelpViewController(sender: self)
     }
+    
+    //MARK: - TableView Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return yelpBusinessArray.count

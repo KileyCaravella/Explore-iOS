@@ -8,31 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController, YelpViewControllerDelegate {
-
+class RandomizeViewController: UIViewController, YelpTableViewControllerDelegate {
+    
+    var navCon: NavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupNavigationController()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupNavigationController() {
+        navigationItem.title = "Explore"
     }
 
     @IBAction func randomizeButtonPressed(_ sender: Any) {
+        //** TESTING CODE HERE **//
+        
+        var yelpBusinessArray: [YelpBusiness] = []
+        for _ in 0..<10 {
+            let business = YelpBusiness();
+            yelpBusinessArray.append(business)
+        }
+        
         //Yelp Call Here
         YelpClient.sharedInstance.searchYelpBusinesses(withLocation: "35-Crescent-St-Waltham-MA") { result in
             switch result {
             case .Success(let businesses):
-                guard let yelpVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "yelpVC") as? YelpViewController,
+                guard let yelpVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "yelpTableVC") as? YelpTableViewController,
                     let businesses = businesses as? [YelpBusiness] else {return}
                 yelpVC.yelpBusinessArray = businesses
                 yelpVC.delegate = self
                 DispatchQueue.main.async {
-                    self.present(yelpVC, animated: true, completion: nil)
+                    self.navigationController?.pushViewController(yelpVC, animated: true)
                 }
-                
                 break
             case .Failure(let error):
                 print(error)
@@ -43,6 +51,6 @@ class ViewController: UIViewController, YelpViewControllerDelegate {
     }
     
     func didRequestToDismissYelpViewController(sender: UIViewController) {
-        self.dismiss(animated: true, completion: nil)
+        let _ = navigationController?.popViewController(animated: true)
     }
 }

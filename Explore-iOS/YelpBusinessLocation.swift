@@ -18,6 +18,18 @@ class YelpBusinessLocation {
     var country: String
     var displayAddress: [String]
     
+    //for testing purposes
+    init() {
+        address1 = "25 Crescent St."
+        address2 = ""
+        address3 = ""
+        city = "Waltham"
+        state = "MA"
+        zipCode = "02453"
+        country = "USA"
+        displayAddress = [address1, city + " " + state + " " + zipCode]
+    }
+    
     init(js: [String:Any]) {
         address1 = js["address1"] as? String ?? ""
         address2 = js["address2"] as? String ?? ""

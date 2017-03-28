@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5763E47D1E8179D200D1DE0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E47C1E8179D200D1DE0F /* AppDelegate.swift */; };
-		5763E47F1E8179D200D1DE0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E47E1E8179D200D1DE0F /* ViewController.swift */; };
+		5763E47F1E8179D200D1DE0F /* RandomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E47E1E8179D200D1DE0F /* RandomizeViewController.swift */; };
 		5763E4821E8179D200D1DE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5763E4801E8179D200D1DE0F /* Main.storyboard */; };
 		5763E4841E8179D200D1DE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5763E4831E8179D200D1DE0F /* Assets.xcassets */; };
 		5763E4871E8179D200D1DE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5763E4851E8179D200D1DE0F /* LaunchScreen.storyboard */; };
 		5763E4921E8179D200D1DE0F /* Explore_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E4911E8179D200D1DE0F /* Explore_iOSTests.swift */; };
 		5763E49D1E8179D200D1DE0F /* Explore_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E49C1E8179D200D1DE0F /* Explore_iOSUITests.swift */; };
+		57A113851E894B1A001BA3D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A113841E894B1A001BA3D4 /* NavigationController.swift */; };
+		57A113871E894D5F001BA3D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A113861E894D5F001BA3D4 /* LoginViewController.swift */; };
 		57D48C641E81E479003834E1 /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C5E1E81E479003834E1 /* YelpBusiness.swift */; };
 		57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */; };
 		57D48C661E81E479003834E1 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C601E81E479003834E1 /* YelpClient.swift */; };
 		57D48C671E81E479003834E1 /* YelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C611E81E479003834E1 /* YelpTableViewCell.swift */; };
 		57D48C681E81E479003834E1 /* YelpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57D48C621E81E479003834E1 /* YelpTableViewCell.xib */; };
-		57D48C691E81E479003834E1 /* YelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C631E81E479003834E1 /* YelpViewController.swift */; };
+		57D48C691E81E479003834E1 /* YelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C631E81E479003834E1 /* YelpTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,7 @@
 /* Begin PBXFileReference section */
 		5763E4791E8179D200D1DE0F /* Explore-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5763E47C1E8179D200D1DE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5763E47E1E8179D200D1DE0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5763E47E1E8179D200D1DE0F /* RandomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizeViewController.swift; sourceTree = "<group>"; };
 		5763E4811E8179D200D1DE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5763E4831E8179D200D1DE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5763E4861E8179D200D1DE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,12 +55,14 @@
 		5763E4981E8179D200D1DE0F /* Explore-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Explore-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5763E49C1E8179D200D1DE0F /* Explore_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore_iOSUITests.swift; sourceTree = "<group>"; };
 		5763E49E1E8179D200D1DE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A113841E894B1A001BA3D4 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		57A113861E894D5F001BA3D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57D48C5E1E81E479003834E1 /* YelpBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
 		57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessLocation.swift; sourceTree = "<group>"; };
 		57D48C601E81E479003834E1 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		57D48C611E81E479003834E1 /* YelpTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpTableViewCell.swift; sourceTree = "<group>"; };
 		57D48C621E81E479003834E1 /* YelpTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YelpTableViewCell.xib; sourceTree = "<group>"; };
-		57D48C631E81E479003834E1 /* YelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpViewController.swift; sourceTree = "<group>"; };
+		57D48C631E81E479003834E1 /* YelpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +115,13 @@
 			children = (
 				57D48C6A1E81E484003834E1 /* Yelp */,
 				5763E47C1E8179D200D1DE0F /* AppDelegate.swift */,
-				5763E47E1E8179D200D1DE0F /* ViewController.swift */,
+				5763E47E1E8179D200D1DE0F /* RandomizeViewController.swift */,
 				5763E4801E8179D200D1DE0F /* Main.storyboard */,
 				5763E4831E8179D200D1DE0F /* Assets.xcassets */,
 				5763E4851E8179D200D1DE0F /* LaunchScreen.storyboard */,
 				5763E4881E8179D200D1DE0F /* Info.plist */,
+				57A113841E894B1A001BA3D4 /* NavigationController.swift */,
+				57A113861E894D5F001BA3D4 /* LoginViewController.swift */,
 			);
 			path = "Explore-iOS";
 			sourceTree = "<group>";
@@ -146,7 +152,7 @@
 				57D48C601E81E479003834E1 /* YelpClient.swift */,
 				57D48C611E81E479003834E1 /* YelpTableViewCell.swift */,
 				57D48C621E81E479003834E1 /* YelpTableViewCell.xib */,
-				57D48C631E81E479003834E1 /* YelpViewController.swift */,
+				57D48C631E81E479003834E1 /* YelpTableViewController.swift */,
 			);
 			name = Yelp;
 			sourceTree = "<group>";
@@ -287,11 +293,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D48C661E81E479003834E1 /* YelpClient.swift in Sources */,
+				57A113851E894B1A001BA3D4 /* NavigationController.swift in Sources */,
 				57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */,
 				57D48C641E81E479003834E1 /* YelpBusiness.swift in Sources */,
 				57D48C671E81E479003834E1 /* YelpTableViewCell.swift in Sources */,
-				5763E47F1E8179D200D1DE0F /* ViewController.swift in Sources */,
-				57D48C691E81E479003834E1 /* YelpViewController.swift in Sources */,
+				5763E47F1E8179D200D1DE0F /* RandomizeViewController.swift in Sources */,
+				57A113871E894D5F001BA3D4 /* LoginViewController.swift in Sources */,
+				57D48C691E81E479003834E1 /* YelpTableViewController.swift in Sources */,
 				5763E47D1E8179D200D1DE0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

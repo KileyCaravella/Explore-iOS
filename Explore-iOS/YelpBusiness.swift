@@ -23,6 +23,25 @@ class YelpBusiness {
     var imageURL: String
     var coordinates: [String:Any]
     
+    //For testing purposes.
+    init() {
+        id = "12345"
+        name = "business tester"
+        reviewCount = 0
+        rating = Double(arc4random_uniform(10))/2
+        distance = 0.2
+        categories = [:]
+        url = "lalala.com"
+        phone = "+18607073750"
+        displayPhone = "(860) 707-3750"
+        isClosed = false
+        location = YelpBusinessLocation()
+        imageURL = "none"
+        coordinates = [:]
+        
+        
+    }
+    
     init(js: [String:Any]) {
         id = js["id"] as? String ?? ""
         name = js["name"] as? String ?? ""

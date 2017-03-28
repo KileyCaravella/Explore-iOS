@@ -51,11 +51,8 @@ class YelpTableViewCell: UITableViewCell {
     
     private func setYelpRating(rating: Double) {
         switch(rating) {
-        case 0.0:
-            ratingImageView.image = UIImage(named: "small_0")
-            break
-        case 0.5:
-            ratingImageView.image = UIImage(named: "small_0_half")
+        case 0.5: //YELP ERROR: - Yelp does not return a half-star review image so we are rounding up.
+            ratingImageView.image = UIImage(named: "small_1")
             break
         case 1.0:
             ratingImageView.image = UIImage(named: "small_1")
