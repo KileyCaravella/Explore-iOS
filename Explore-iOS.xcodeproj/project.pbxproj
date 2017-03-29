@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5711E9901E8B8F5300531D6D /* LoginNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5711E98F1E8B8F5300531D6D /* LoginNib.xib */; };
+		5711E9921E8B923E00531D6D /* LoginNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E9911E8B923E00531D6D /* LoginNib.swift */; };
+		5711E9951E8B974A00531D6D /* UIView+LoadNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E9941E8B974A00531D6D /* UIView+LoadNib.swift */; };
+		5711E9971E8BA67B00531D6D /* SlideCustomAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E9961E8BA67A00531D6D /* SlideCustomAnimationController.swift */; };
+		5711E9991E8BAB6C00531D6D /* SignUpNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E9981E8BAB6C00531D6D /* SignUpNib.swift */; };
+		5711E99B1E8BAB8600531D6D /* SignUpNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5711E99A1E8BAB8600531D6D /* SignUpNib.xib */; };
+		5711E99F1E8BBBE000531D6D /* GeneralNibClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */; };
+		575DDD2F1E8AF7BC0094E5E9 /* MySQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD2E1E8AF7BC0094E5E9 /* MySQLClient.swift */; };
+		575DDD311E8AF89B0094E5E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD301E8AF89B0094E5E9 /* User.swift */; };
+		575DDD331E8AF94E0094E5E9 /* GeneralClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD321E8AF94E0094E5E9 /* GeneralClient.swift */; };
+		575DDD3D1E8B5B770094E5E9 /* FadeCustomAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD3C1E8B5B770094E5E9 /* FadeCustomAnimationController.swift */; };
 		5763E47D1E8179D200D1DE0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E47C1E8179D200D1DE0F /* AppDelegate.swift */; };
 		5763E47F1E8179D200D1DE0F /* RandomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E47E1E8179D200D1DE0F /* RandomizeViewController.swift */; };
 		5763E4821E8179D200D1DE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5763E4801E8179D200D1DE0F /* Main.storyboard */; };
@@ -42,6 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5711E98F1E8B8F5300531D6D /* LoginNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginNib.xib; sourceTree = "<group>"; };
+		5711E9911E8B923E00531D6D /* LoginNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNib.swift; sourceTree = "<group>"; };
+		5711E9941E8B974A00531D6D /* UIView+LoadNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LoadNib.swift"; sourceTree = "<group>"; };
+		5711E9961E8BA67A00531D6D /* SlideCustomAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideCustomAnimationController.swift; sourceTree = "<group>"; };
+		5711E9981E8BAB6C00531D6D /* SignUpNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNib.swift; sourceTree = "<group>"; };
+		5711E99A1E8BAB8600531D6D /* SignUpNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpNib.xib; sourceTree = "<group>"; };
+		5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralNibClass.swift; sourceTree = "<group>"; };
+		575DDD2E1E8AF7BC0094E5E9 /* MySQLClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLClient.swift; sourceTree = "<group>"; };
+		575DDD301E8AF89B0094E5E9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		575DDD321E8AF94E0094E5E9 /* GeneralClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralClient.swift; sourceTree = "<group>"; };
+		575DDD3C1E8B5B770094E5E9 /* FadeCustomAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeCustomAnimationController.swift; sourceTree = "<group>"; };
 		5763E4791E8179D200D1DE0F /* Explore-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5763E47C1E8179D200D1DE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5763E47E1E8179D200D1DE0F /* RandomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizeViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +112,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5711E9931E8B972900531D6D /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				5711E9941E8B974A00531D6D /* UIView+LoadNib.swift */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		575DDD341E8B4A290094E5E9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				57A113861E894D5F001BA3D4 /* LoginViewController.swift */,
+				5711E98F1E8B8F5300531D6D /* LoginNib.xib */,
+				5711E9911E8B923E00531D6D /* LoginNib.swift */,
+				5711E9981E8BAB6C00531D6D /* SignUpNib.swift */,
+				5711E99A1E8BAB8600531D6D /* SignUpNib.xib */,
+				5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		575DDD351E8B4A380094E5E9 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				575DDD2E1E8AF7BC0094E5E9 /* MySQLClient.swift */,
+				57D48C601E81E479003834E1 /* YelpClient.swift */,
+				575DDD321E8AF94E0094E5E9 /* GeneralClient.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		575DDD361E8B4A4A0094E5E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */,
+				57D48C5E1E81E479003834E1 /* YelpBusiness.swift */,
+				575DDD301E8AF89B0094E5E9 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		575DDD371E8B4A6F0094E5E9 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				5763E47C1E8179D200D1DE0F /* AppDelegate.swift */,
+				5763E4881E8179D200D1DE0F /* Info.plist */,
+				5763E4831E8179D200D1DE0F /* Assets.xcassets */,
+				5763E4801E8179D200D1DE0F /* Main.storyboard */,
+				5763E4851E8179D200D1DE0F /* LaunchScreen.storyboard */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		575DDD3B1E8B5B570094E5E9 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				57A113841E894B1A001BA3D4 /* NavigationController.swift */,
+				575DDD3C1E8B5B770094E5E9 /* FadeCustomAnimationController.swift */,
+				5711E9961E8BA67A00531D6D /* SlideCustomAnimationController.swift */,
+			);
+			name = NavigationControllers;
+			sourceTree = "<group>";
+		};
 		5763E4701E8179D100D1DE0F = {
 			isa = PBXGroup;
 			children = (
@@ -113,15 +198,14 @@
 		5763E47B1E8179D200D1DE0F /* Explore-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5711E9931E8B972900531D6D /* Extentions */,
+				575DDD3B1E8B5B570094E5E9 /* NavigationControllers */,
+				575DDD371E8B4A6F0094E5E9 /* General */,
+				575DDD361E8B4A4A0094E5E9 /* Models */,
+				575DDD351E8B4A380094E5E9 /* Clients */,
+				575DDD341E8B4A290094E5E9 /* Login */,
 				57D48C6A1E81E484003834E1 /* Yelp */,
-				5763E47C1E8179D200D1DE0F /* AppDelegate.swift */,
 				5763E47E1E8179D200D1DE0F /* RandomizeViewController.swift */,
-				5763E4801E8179D200D1DE0F /* Main.storyboard */,
-				5763E4831E8179D200D1DE0F /* Assets.xcassets */,
-				5763E4851E8179D200D1DE0F /* LaunchScreen.storyboard */,
-				5763E4881E8179D200D1DE0F /* Info.plist */,
-				57A113841E894B1A001BA3D4 /* NavigationController.swift */,
-				57A113861E894D5F001BA3D4 /* LoginViewController.swift */,
 			);
 			path = "Explore-iOS";
 			sourceTree = "<group>";
@@ -147,9 +231,6 @@
 		57D48C6A1E81E484003834E1 /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
-				57D48C5E1E81E479003834E1 /* YelpBusiness.swift */,
-				57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */,
-				57D48C601E81E479003834E1 /* YelpClient.swift */,
 				57D48C611E81E479003834E1 /* YelpTableViewCell.swift */,
 				57D48C621E81E479003834E1 /* YelpTableViewCell.xib */,
 				57D48C631E81E479003834E1 /* YelpTableViewController.swift */,
@@ -264,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5711E9901E8B8F5300531D6D /* LoginNib.xib in Resources */,
+				5711E99B1E8BAB8600531D6D /* SignUpNib.xib in Resources */,
 				5763E4871E8179D200D1DE0F /* LaunchScreen.storyboard in Resources */,
 				5763E4841E8179D200D1DE0F /* Assets.xcassets in Resources */,
 				5763E4821E8179D200D1DE0F /* Main.storyboard in Resources */,
@@ -293,14 +376,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D48C661E81E479003834E1 /* YelpClient.swift in Sources */,
+				5711E9921E8B923E00531D6D /* LoginNib.swift in Sources */,
 				57A113851E894B1A001BA3D4 /* NavigationController.swift in Sources */,
+				5711E99F1E8BBBE000531D6D /* GeneralNibClass.swift in Sources */,
 				57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */,
+				575DDD2F1E8AF7BC0094E5E9 /* MySQLClient.swift in Sources */,
 				57D48C641E81E479003834E1 /* YelpBusiness.swift in Sources */,
+				575DDD3D1E8B5B770094E5E9 /* FadeCustomAnimationController.swift in Sources */,
 				57D48C671E81E479003834E1 /* YelpTableViewCell.swift in Sources */,
 				5763E47F1E8179D200D1DE0F /* RandomizeViewController.swift in Sources */,
+				575DDD331E8AF94E0094E5E9 /* GeneralClient.swift in Sources */,
 				57A113871E894D5F001BA3D4 /* LoginViewController.swift in Sources */,
 				57D48C691E81E479003834E1 /* YelpTableViewController.swift in Sources */,
+				5711E9951E8B974A00531D6D /* UIView+LoadNib.swift in Sources */,
 				5763E47D1E8179D200D1DE0F /* AppDelegate.swift in Sources */,
+				5711E9971E8BA67B00531D6D /* SlideCustomAnimationController.swift in Sources */,
+				575DDD311E8AF89B0094E5E9 /* User.swift in Sources */,
+				5711E9991E8BAB6C00531D6D /* SignUpNib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

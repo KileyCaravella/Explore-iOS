@@ -8,19 +8,7 @@
 
 import Foundation
 
-enum YelpError: Error {
-    case Unknown
-    case ErrorSettingUpRequest
-    case ErrorParsingJson
-}
-
-enum Result {
-    case Success(Any)
-    case Failure(Error)
-}
-
-
-class YelpClient {
+class YelpClient: GeneralClient {
     
     final let BASE_URL = "https://api.yelp.com/"
     final let AUTH_URL = "oauth2/token"
@@ -34,24 +22,7 @@ class YelpClient {
     
     //Class has a singleton, meaning only one ever exists.
     static let sharedInstance = YelpClient()
-    private init() {}
-    
-    func setupRequest(withAppendingURL appendingURL: String, type: String, headers: [String: String], params: [String: String]) -> URLRequest? {
-        guard let url = URL(string: BASE_URL + appendingURL) else { return nil }
-        var request = URLRequest(url: url)
-        request.httpMethod = type
-        request.allHTTPHeaderFields = headers
-        
-        var paramString:String = ""
-        if (!params.isEmpty) {
-            for (key,value) in params {
-                paramString += key + "=" + value + "&"
-            }
-            paramString = paramString.substring(to: paramString.index(before: paramString.endIndex))
-            request.httpBody = paramString.data(using: .utf8)
-        }
-        return request
-    }
+    private override init() {}
     
     func getYelpToken(completion: @escaping (Result) -> Void) {
         print("Retrieving Token...")
@@ -65,18 +36,18 @@ class YelpClient {
             "grant_type":"client_credentials"
         ]
         
-        guard let request = setupRequest(withAppendingURL: AUTH_URL, type: "POST", headers: headers, params: params) else {
-            completion(.Failure(YelpError.ErrorSettingUpRequest))
+        guard let request = setupRequest(withURL: BASE_URL + AUTH_URL, type: "POST", headers: headers, params: params) else {
+            completion(.Failure(ClientError.ErrorSettingUpRequest))
             return
         }
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.Failure(error))
             } else if let data = data {
                 do {
                     guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any], let tokenType = json["token_type"] as? String, let accessToken = json["access_token"] as? String else {
-                        completion(.Failure(YelpError.ErrorParsingJson))
+                        completion(.Failure(ClientError.ErrorParsingJson))
                         return
                     }
                     self.YELP_TOKEN = tokenType + " " + accessToken
@@ -87,8 +58,7 @@ class YelpClient {
                 }
                 
             }
-        }
-        task.resume()
+        }.resume()
     }
     
     func searchYelpBusinesses(withLatitude latitude: Double, andLongitude longitude: Double, completion: @escaping (Result) -> Void) {
@@ -130,8 +100,8 @@ class YelpClient {
         let headers: [String: String] = [
             "Authorization": YELP_TOKEN
         ]
-        guard let request = setupRequest(withAppendingURL: url, type: "GET", headers: headers, params: [:]) else {
-            completion(.Failure(YelpError.ErrorSettingUpRequest))
+        guard let request = setupRequest(withURL: BASE_URL + url, type: "GET", headers: headers, params: [:]) else {
+            completion(.Failure(ClientError.ErrorSettingUpRequest))
             return
         }
         
@@ -141,7 +111,7 @@ class YelpClient {
             } else if let data = data {
                 do {
                     guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any], let businesses = json["businesses"] as? [[String:Any]] else {
-                        completion(.Failure(YelpError.ErrorParsingJson))
+                        completion(.Failure(ClientError.ErrorParsingJson))
                         return
                     }
                     

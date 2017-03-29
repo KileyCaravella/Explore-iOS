@@ -10,7 +10,7 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-    private let backArrowIconImage = UIImage(named: "backArrowIcon")
+//    private let backArrowIconImage = UIImage(named: "backArrowIcon")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,9 @@ class NavigationController: UINavigationController {
         navigationBar.tintColor = .white
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         navigationBar.isTranslucent = false
-        navigationBar.backIndicatorTransitionMaskImage = backArrowIconImage
-        navigationBar.backIndicatorImage = backArrowIconImage
+        
+//        navigationBar.backIndicatorTransitionMaskImage = backArrowIconImage
+//        navigationBar.backIndicatorImage = backArrowIconImage
     }
     
     override init(rootViewController: UIViewController) {
@@ -38,4 +39,5 @@ class NavigationController: UINavigationController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
+    
 }

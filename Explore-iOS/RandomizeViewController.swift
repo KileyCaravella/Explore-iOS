@@ -10,11 +10,20 @@ import UIKit
 
 class RandomizeViewController: UIViewController, YelpTableViewControllerDelegate {
     
+    @IBOutlet weak var randomizeButton: UIButton!
+    @IBOutlet weak var bucketListButton: UIButton!
+    
     var navCon: NavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
+        setup(button: randomizeButton)
+        setup(button: bucketListButton)
+    }
+    
+    func setup(button: UIButton) {
+        button.layer.cornerRadius = button.frame.height/4
     }
     
     func setupNavigationController() {

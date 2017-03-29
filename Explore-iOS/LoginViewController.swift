@@ -8,20 +8,124 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+enum NavigateText:String {
+    case Login = "Log In"
+    case SignUp = "Join the Family"
+    case ForgotPassword = "Forgot Password"
+    case Unknown = ""
+}
+
+class LoginViewController: GeneralNibDelegateViewController {
     
-    var navCon: NavigationController?
+    //MARK: - Variables
+    
+    @IBOutlet weak var nibView: UIView!
+    @IBOutlet weak var nibViewConstraint: NSLayoutConstraint!
+    
+    var mainStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    var navController: NavigationController?
+    var currentNib: NavigateText = .Login
+    let slideCustomAnimationController = SlideCustomAnimationController()
+
+    //MARK: - Setup for View
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let loginNib = setup(nibwithName: "LoginNib") as? LoginNib else { return }
+        loginNib.alpha = 1
+        loginNib.delegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        navController = navigationController as? NavigationController
+        navController?.delegate = self
     }
     
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        guard let randomizeVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "randomizeVC") as? RandomizeViewController else { return }
+    func setup(nibwithName name: String) -> UIView {
+        guard let nib = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? UIView else { return UIView() }
+        nibView.addSubview(nib)
+        nib.alpha = 0
+        nib.center.x = nibView.bounds.width/2
+        nib.frame.origin.y = 0
+        return nib
+    }
+    
+    func setup(textField: UITextField) {
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.cornerRadius = 10.0
+    }
+    
+    //MARK: - Navigating Between Nib Views
+    
+    @IBAction func navigateButtonPressed(_ sender: UIButton) {
+        guard let navigateText = sender.titleLabel?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
+        sender.setTitle(currentNib.rawValue, for: .normal)
         
-        let navCon = NavigationController(rootViewController: randomizeVC)
-        self.present(navCon, animated: true, completion: nil)
+        var nibName: String
+        switch(navigateText) {
+        case NavigateText.Login.rawValue:
+            currentNib = .Login
+            nibName = "LoginNib"
+            break
+        case NavigateText.SignUp.rawValue:
+            currentNib = .SignUp
+            nibName = "SignUpNib"
+            break
+        case NavigateText.ForgotPassword.rawValue:
+            currentNib = .ForgotPassword
+            nibName = "ForgotPasswordNib"
+            break
+        default:
+            currentNib = .Unknown
+            nibName = ""
+            break
+        }
+        
+        guard let nextNib: GeneralNibView = setup(nibwithName: nibName) as? GeneralNibView else { return }
+        nextNib.delegate = self
+        animateNibTransition(fromNib: nibView.subviews.first, toNib: nextNib)
+    }
+    
+    func animateNibTransition(fromNib: UIView?, toNib: GeneralNibView) {
+        guard let fromNib = fromNib else { return }
+        UIView.animate(withDuration: 0.3, animations: {
+            fromNib.alpha = 0.2
+            self.nibViewConstraint.constant = toNib.frame.size.height
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.5, animations: {
+                fromNib.alpha = 0
+                toNib.alpha = 1
+            })
+            fromNib.removeFromSuperview()
+        })
+    }
+    
+    //MARK: - Logging into Application
+    
+    
+    //MARK: - LoginNibDelegate
+    
+    override func didGetSuccessfulLoginResult(sender: LoginNib) {
+        let randomizeVC = mainStoryboard.instantiateViewController(withIdentifier: "randomizeVC")
+        randomizeVC.navigationItem.hidesBackButton = true
+        slideCustomAnimationController.directionX = .Right
+        navController?.pushViewController(randomizeVC, animated: true)
+    }
+    
+    //MARK: - SignUpNibDelegate
+    
+    override func didSuccessfullySignUp(sender: SignUpNib) {
+        //TODO: write sign up code here (confirm account nib)
+    }
+}
+
+// MARK: - View Controller Transition
+
+extension LoginViewController: UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return slideCustomAnimationController
     }
 }
