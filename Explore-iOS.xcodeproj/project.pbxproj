@@ -14,6 +14,8 @@
 		5711E9991E8BAB6C00531D6D /* SignUpNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E9981E8BAB6C00531D6D /* SignUpNib.swift */; };
 		5711E99B1E8BAB8600531D6D /* SignUpNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5711E99A1E8BAB8600531D6D /* SignUpNib.xib */; };
 		5711E99F1E8BBBE000531D6D /* GeneralNibClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */; };
+		571688F91E9486DD00DF2135 /* ResetPasswordNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571688F81E9486DD00DF2135 /* ResetPasswordNib.swift */; };
+		571688FB1E9486EC00DF2135 /* ResetPasswordNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571688FA1E9486EC00DF2135 /* ResetPasswordNib.xib */; };
 		575DDD2F1E8AF7BC0094E5E9 /* MySQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD2E1E8AF7BC0094E5E9 /* MySQLClient.swift */; };
 		575DDD311E8AF89B0094E5E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD301E8AF89B0094E5E9 /* User.swift */; };
 		575DDD331E8AF94E0094E5E9 /* GeneralClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DDD321E8AF94E0094E5E9 /* GeneralClient.swift */; };
@@ -25,8 +27,13 @@
 		5763E4871E8179D200D1DE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5763E4851E8179D200D1DE0F /* LaunchScreen.storyboard */; };
 		5763E4921E8179D200D1DE0F /* Explore_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E4911E8179D200D1DE0F /* Explore_iOSTests.swift */; };
 		5763E49D1E8179D200D1DE0F /* Explore_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763E49C1E8179D200D1DE0F /* Explore_iOSUITests.swift */; };
+		579045641E8C19B200CCF447 /* ConfirmSignUpNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579045631E8C19B200CCF447 /* ConfirmSignUpNib.swift */; };
+		579045661E8C19CA00CCF447 /* ConfirmSignUpNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579045651E8C19CA00CCF447 /* ConfirmSignUpNib.xib */; };
+		579045681E8C520600CCF447 /* ForgotPasswordNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579045671E8C520600CCF447 /* ForgotPasswordNib.swift */; };
+		5790456A1E8C521300CCF447 /* ForgotPasswordNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579045691E8C521300CCF447 /* ForgotPasswordNib.xib */; };
 		57A113851E894B1A001BA3D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A113841E894B1A001BA3D4 /* NavigationController.swift */; };
 		57A113871E894D5F001BA3D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A113861E894D5F001BA3D4 /* LoginViewController.swift */; };
+		57C5EB901E8DB27D00EA2E3E /* SingleYelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5EB8F1E8DB27D00EA2E3E /* SingleYelpViewController.swift */; };
 		57D48C641E81E479003834E1 /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C5E1E81E479003834E1 /* YelpBusiness.swift */; };
 		57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */; };
 		57D48C661E81E479003834E1 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D48C601E81E479003834E1 /* YelpClient.swift */; };
@@ -60,6 +67,8 @@
 		5711E9981E8BAB6C00531D6D /* SignUpNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNib.swift; sourceTree = "<group>"; };
 		5711E99A1E8BAB8600531D6D /* SignUpNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpNib.xib; sourceTree = "<group>"; };
 		5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralNibClass.swift; sourceTree = "<group>"; };
+		571688F81E9486DD00DF2135 /* ResetPasswordNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordNib.swift; sourceTree = "<group>"; };
+		571688FA1E9486EC00DF2135 /* ResetPasswordNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordNib.xib; sourceTree = "<group>"; };
 		575DDD2E1E8AF7BC0094E5E9 /* MySQLClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLClient.swift; sourceTree = "<group>"; };
 		575DDD301E8AF89B0094E5E9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		575DDD321E8AF94E0094E5E9 /* GeneralClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralClient.swift; sourceTree = "<group>"; };
@@ -77,8 +86,13 @@
 		5763E4981E8179D200D1DE0F /* Explore-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Explore-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5763E49C1E8179D200D1DE0F /* Explore_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore_iOSUITests.swift; sourceTree = "<group>"; };
 		5763E49E1E8179D200D1DE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579045631E8C19B200CCF447 /* ConfirmSignUpNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmSignUpNib.swift; sourceTree = "<group>"; };
+		579045651E8C19CA00CCF447 /* ConfirmSignUpNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmSignUpNib.xib; sourceTree = "<group>"; };
+		579045671E8C520600CCF447 /* ForgotPasswordNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordNib.swift; sourceTree = "<group>"; };
+		579045691E8C521300CCF447 /* ForgotPasswordNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordNib.xib; sourceTree = "<group>"; };
 		57A113841E894B1A001BA3D4 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		57A113861E894D5F001BA3D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57C5EB8F1E8DB27D00EA2E3E /* SingleYelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleYelpViewController.swift; sourceTree = "<group>"; };
 		57D48C5E1E81E479003834E1 /* YelpBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
 		57D48C5F1E81E479003834E1 /* YelpBusinessLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessLocation.swift; sourceTree = "<group>"; };
 		57D48C601E81E479003834E1 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
@@ -124,11 +138,17 @@
 			isa = PBXGroup;
 			children = (
 				57A113861E894D5F001BA3D4 /* LoginViewController.swift */,
-				5711E98F1E8B8F5300531D6D /* LoginNib.xib */,
+				5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */,
 				5711E9911E8B923E00531D6D /* LoginNib.swift */,
+				5711E98F1E8B8F5300531D6D /* LoginNib.xib */,
 				5711E9981E8BAB6C00531D6D /* SignUpNib.swift */,
 				5711E99A1E8BAB8600531D6D /* SignUpNib.xib */,
-				5711E99E1E8BBBE000531D6D /* GeneralNibClass.swift */,
+				579045631E8C19B200CCF447 /* ConfirmSignUpNib.swift */,
+				579045651E8C19CA00CCF447 /* ConfirmSignUpNib.xib */,
+				571688F81E9486DD00DF2135 /* ResetPasswordNib.swift */,
+				571688FA1E9486EC00DF2135 /* ResetPasswordNib.xib */,
+				579045671E8C520600CCF447 /* ForgotPasswordNib.swift */,
+				579045691E8C521300CCF447 /* ForgotPasswordNib.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -228,12 +248,29 @@
 			path = "Explore-iOSUITests";
 			sourceTree = "<group>";
 		};
+		57C5EB911E8DBE8200EA2E3E /* YelpTableView */ = {
+			isa = PBXGroup;
+			children = (
+				57D48C631E81E479003834E1 /* YelpTableViewController.swift */,
+				57D48C611E81E479003834E1 /* YelpTableViewCell.swift */,
+				57D48C621E81E479003834E1 /* YelpTableViewCell.xib */,
+			);
+			name = YelpTableView;
+			sourceTree = "<group>";
+		};
+		57C5EB921E8DBE9500EA2E3E /* SingleYelpView */ = {
+			isa = PBXGroup;
+			children = (
+				57C5EB8F1E8DB27D00EA2E3E /* SingleYelpViewController.swift */,
+			);
+			name = SingleYelpView;
+			sourceTree = "<group>";
+		};
 		57D48C6A1E81E484003834E1 /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
-				57D48C611E81E479003834E1 /* YelpTableViewCell.swift */,
-				57D48C621E81E479003834E1 /* YelpTableViewCell.xib */,
-				57D48C631E81E479003834E1 /* YelpTableViewController.swift */,
+				57C5EB921E8DBE9500EA2E3E /* SingleYelpView */,
+				57C5EB911E8DBE8200EA2E3E /* YelpTableView */,
 			);
 			name = Yelp;
 			sourceTree = "<group>";
@@ -347,9 +384,12 @@
 			files = (
 				5711E9901E8B8F5300531D6D /* LoginNib.xib in Resources */,
 				5711E99B1E8BAB8600531D6D /* SignUpNib.xib in Resources */,
+				571688FB1E9486EC00DF2135 /* ResetPasswordNib.xib in Resources */,
 				5763E4871E8179D200D1DE0F /* LaunchScreen.storyboard in Resources */,
+				5790456A1E8C521300CCF447 /* ForgotPasswordNib.xib in Resources */,
 				5763E4841E8179D200D1DE0F /* Assets.xcassets in Resources */,
 				5763E4821E8179D200D1DE0F /* Main.storyboard in Resources */,
+				579045661E8C19CA00CCF447 /* ConfirmSignUpNib.xib in Resources */,
 				57D48C681E81E479003834E1 /* YelpTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +417,7 @@
 			files = (
 				57D48C661E81E479003834E1 /* YelpClient.swift in Sources */,
 				5711E9921E8B923E00531D6D /* LoginNib.swift in Sources */,
+				579045641E8C19B200CCF447 /* ConfirmSignUpNib.swift in Sources */,
 				57A113851E894B1A001BA3D4 /* NavigationController.swift in Sources */,
 				5711E99F1E8BBBE000531D6D /* GeneralNibClass.swift in Sources */,
 				57D48C651E81E479003834E1 /* YelpBusinessLocation.swift in Sources */,
@@ -389,10 +430,13 @@
 				57A113871E894D5F001BA3D4 /* LoginViewController.swift in Sources */,
 				57D48C691E81E479003834E1 /* YelpTableViewController.swift in Sources */,
 				5711E9951E8B974A00531D6D /* UIView+LoadNib.swift in Sources */,
+				57C5EB901E8DB27D00EA2E3E /* SingleYelpViewController.swift in Sources */,
+				571688F91E9486DD00DF2135 /* ResetPasswordNib.swift in Sources */,
 				5763E47D1E8179D200D1DE0F /* AppDelegate.swift in Sources */,
 				5711E9971E8BA67B00531D6D /* SlideCustomAnimationController.swift in Sources */,
 				575DDD311E8AF89B0094E5E9 /* User.swift in Sources */,
 				5711E9991E8BAB6C00531D6D /* SignUpNib.swift in Sources */,
+				579045681E8C520600CCF447 /* ForgotPasswordNib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

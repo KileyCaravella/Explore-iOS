@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SignUpNib" customModule="Explore_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="289"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="331"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up Below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXx-o1-xBW">
-                    <rect key="frame" x="114" y="0.0" width="116" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXx-o1-xBW">
+                    <rect key="frame" x="139.5" y="0.0" width="65.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -31,13 +31,13 @@
                     <rect key="frame" x="30" y="87" width="283" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HY1-kZ-LlC">
                     <rect key="frame" x="30" y="125" width="283" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mse-ai-riB">
                     <rect key="frame" x="30" y="163" width="283" height="30"/>
@@ -61,7 +61,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99p-tE-9IH">
-                    <rect key="frame" x="98" y="246" width="147" height="30"/>
+                    <rect key="frame" x="98" y="281" width="147" height="30"/>
                     <color key="backgroundColor" red="0.83410154930000002" green="0.71148888269999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="147" id="3KE-Dz-MVp"/>
@@ -73,20 +73,29 @@
                         <action selector="signUpButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="61A-2G-Amc"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19W-7C-GS7">
+                    <rect key="frame" x="30" y="239" width="283" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="fpy-xN-g9Z" firstAttribute="trailing" secondItem="mse-ai-riB" secondAttribute="trailing" id="0Mf-9o-3AX"/>
                 <constraint firstItem="ZGU-cP-DuW" firstAttribute="trailing" secondItem="sMK-gQ-7Cg" secondAttribute="trailing" id="1XY-Co-vFZ"/>
-                <constraint firstItem="99p-tE-9IH" firstAttribute="top" secondItem="fpy-xN-g9Z" secondAttribute="bottom" constant="15" id="2aX-9C-dqy"/>
+                <constraint firstItem="99p-tE-9IH" firstAttribute="top" secondItem="19W-7C-GS7" secondAttribute="bottom" constant="12" id="7HO-cs-lYZ"/>
                 <constraint firstAttribute="trailing" secondItem="sMK-gQ-7Cg" secondAttribute="trailing" constant="30" id="7HP-Cn-O79"/>
                 <constraint firstItem="kXx-o1-xBW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8UL-YD-0nI"/>
                 <constraint firstItem="mse-ai-riB" firstAttribute="trailing" secondItem="HY1-kZ-LlC" secondAttribute="trailing" id="FMS-Oi-5kV"/>
+                <constraint firstItem="19W-7C-GS7" firstAttribute="width" secondItem="fpy-xN-g9Z" secondAttribute="width" id="HC0-vb-A1k"/>
                 <constraint firstItem="ZGU-cP-DuW" firstAttribute="top" secondItem="sMK-gQ-7Cg" secondAttribute="bottom" constant="8" id="JMQ-XG-F7o"/>
+                <constraint firstItem="19W-7C-GS7" firstAttribute="top" secondItem="fpy-xN-g9Z" secondAttribute="bottom" constant="8" id="JeV-U4-foJ"/>
                 <constraint firstItem="fpy-xN-g9Z" firstAttribute="leading" secondItem="mse-ai-riB" secondAttribute="leading" id="Kag-nD-xf4"/>
                 <constraint firstItem="ZGU-cP-DuW" firstAttribute="leading" secondItem="sMK-gQ-7Cg" secondAttribute="leading" id="O6o-Rh-LZ9"/>
                 <constraint firstItem="fpy-xN-g9Z" firstAttribute="top" secondItem="mse-ai-riB" secondAttribute="bottom" constant="8" id="OJ8-nb-A3U"/>
                 <constraint firstItem="mse-ai-riB" firstAttribute="leading" secondItem="HY1-kZ-LlC" secondAttribute="leading" id="Piu-nh-jlg"/>
                 <constraint firstItem="HY1-kZ-LlC" firstAttribute="top" secondItem="ZGU-cP-DuW" secondAttribute="bottom" constant="8" id="QBg-wu-eCi"/>
+                <constraint firstItem="19W-7C-GS7" firstAttribute="centerX" secondItem="fpy-xN-g9Z" secondAttribute="centerX" id="QkC-Nn-hst"/>
                 <constraint firstItem="BsX-Oh-7rZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="X9a-uA-AAd"/>
                 <constraint firstItem="HY1-kZ-LlC" firstAttribute="leading" secondItem="ZGU-cP-DuW" secondAttribute="leading" id="XPw-SS-6T1"/>
                 <constraint firstItem="99p-tE-9IH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YZw-EB-Ffe"/>
@@ -99,14 +108,16 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="confirmPasswordLabel" destination="mse-ai-riB" id="OQ3-vR-IHO"/>
-                <outlet property="firstNameLabel" destination="mse-ai-riB" id="hlm-5I-oJM"/>
-                <outlet property="lastNameLabel" destination="fpy-xN-g9Z" id="FyQ-Ow-mLE"/>
-                <outlet property="passwordLabel" destination="ZGU-cP-DuW" id="K3i-rb-MSn"/>
+                <outlet property="confirmPasswordTextField" destination="HY1-kZ-LlC" id="V4W-Pl-dpW"/>
+                <outlet property="emailTextField" destination="19W-7C-GS7" id="sPS-eF-BG2"/>
+                <outlet property="errorLabel" destination="BsX-Oh-7rZ" id="gEP-8J-sjg"/>
+                <outlet property="firstNameTextField" destination="mse-ai-riB" id="OEH-dW-6oY"/>
+                <outlet property="lastNameTextField" destination="fpy-xN-g9Z" id="LVg-yr-687"/>
+                <outlet property="passwordTextField" destination="ZGU-cP-DuW" id="xZp-y6-48L"/>
                 <outlet property="signUpButton" destination="99p-tE-9IH" id="7Ik-UH-4Ia"/>
-                <outlet property="usernameLabel" destination="sMK-gQ-7Cg" id="6mB-Wg-9bh"/>
+                <outlet property="usernameTextField" destination="sMK-gQ-7Cg" id="rUx-di-MER"/>
             </connections>
-            <point key="canvasLocation" x="18.5" y="-69.5"/>
+            <point key="canvasLocation" x="18.5" y="-48.5"/>
         </view>
     </objects>
 </document>

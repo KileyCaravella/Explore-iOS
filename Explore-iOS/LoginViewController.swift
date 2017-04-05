@@ -30,7 +30,7 @@ class LoginViewController: GeneralNibDelegateViewController {
     //MARK: - Setup for View
     
     override func viewWillAppear(_ animated: Bool) {
-        guard let loginNib = setup(nibwithName: "LoginNib") as? LoginNib else { return }
+        guard let loginNib = setup(nibwithName: "ResetPasswordNib") as? GeneralNibView else { return }
         loginNib.alpha = 1
         loginNib.delegate = self
     }
@@ -46,8 +46,8 @@ class LoginViewController: GeneralNibDelegateViewController {
         guard let nib = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? UIView else { return UIView() }
         nibView.addSubview(nib)
         nib.alpha = 0
-        nib.center.x = nibView.bounds.width/2
-        nib.frame.origin.y = 0
+        nib.frame.size.width = nibView.frame.width
+        nib.frame.origin = CGPoint(x:0, y:0)
         return nib
     }
     
@@ -83,7 +83,7 @@ class LoginViewController: GeneralNibDelegateViewController {
             break
         }
         
-        guard let nextNib: GeneralNibView = setup(nibwithName: nibName) as? GeneralNibView else { return }
+        guard let nextNib: GeneralNibView = setup(nibwithName: nibName) as? GeneralNibView else { print("bad"); return }
         nextNib.delegate = self
         animateNibTransition(fromNib: nibView.subviews.first, toNib: nextNib)
     }
@@ -92,7 +92,10 @@ class LoginViewController: GeneralNibDelegateViewController {
         guard let fromNib = fromNib else { return }
         UIView.animate(withDuration: 0.3, animations: {
             fromNib.alpha = 0.2
-            self.nibViewConstraint.constant = toNib.frame.size.height
+            
+            self.nibViewConstraint.constant = toNib.frame.height
+            toNib.frame.size.height = self.nibView.frame.height
+            
             self.view.layoutIfNeeded()
         }, completion: { _ in
             UIView.animate(withDuration: 0.5, animations: {
@@ -106,19 +109,40 @@ class LoginViewController: GeneralNibDelegateViewController {
     //MARK: - Logging into Application
     
     
-    //MARK: - LoginNibDelegate
+    //MARK: - GeneralNibDelegateViewController overrides
     
     override func didGetSuccessfulLoginResult(sender: LoginNib) {
-        let randomizeVC = mainStoryboard.instantiateViewController(withIdentifier: "randomizeVC")
-        randomizeVC.navigationItem.hidesBackButton = true
-        slideCustomAnimationController.directionX = .Right
-        navController?.pushViewController(randomizeVC, animated: true)
+        pushRandomizeViewController()
     }
     
     //MARK: - SignUpNibDelegate
     
     override func didSuccessfullySignUp(sender: SignUpNib) {
-        //TODO: write sign up code here (confirm account nib)
+        guard let nextNib: GeneralNibView = setup(nibwithName: "ConfirmSignUpNib") as? GeneralNibView else { return }
+        nextNib.delegate = self
+        animateNibTransition(fromNib: nibView.subviews.first, toNib: nextNib)
+    }
+    
+    override func didSuccessfullyConfirmAccount(sender: ConfirmSignUpNib) {
+        pushRandomizeViewController()
+    }
+    
+    override func didSuccessfullySendAuthEmail(sender: ForgotPasswordNib) {
+        guard let nextNib: GeneralNibView = setup(nibwithName: "ResetPasswordNib") as? GeneralNibView else { return }
+        nextNib.delegate = self
+        animateNibTransition(fromNib: nibView.subviews.first, toNib: nextNib)
+    }
+    
+    override func didSuccessfullyResetPassword(sender: ResetPasswordNib) {
+        pushRandomizeViewController()
+    }
+    
+    func pushRandomizeViewController() {
+        
+        let randomizeVC = mainStoryboard.instantiateViewController(withIdentifier: "randomizeVC")
+        randomizeVC.navigationItem.hidesBackButton = true
+        slideCustomAnimationController.directionX = .Right
+        navController?.pushViewController(randomizeVC, animated: true)
     }
 }
 

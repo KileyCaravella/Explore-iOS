@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="343" height="202"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In Below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDg-Yz-uaa">
-                    <rect key="frame" x="118" y="0.0" width="107" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDg-Yz-uaa">
+                    <rect key="frame" x="143.5" y="0.0" width="56.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -30,13 +30,13 @@
                     <color key="textColor" red="0.41297743059999997" green="0.0" blue="0.41285100829999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-Cd-xV5">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-Cd-xV5">
                     <rect key="frame" x="30" y="55.5" width="283" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk5-kX-S3q">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk5-kX-S3q">
                     <rect key="frame" x="30" y="101.5" width="283" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -60,6 +60,7 @@
                 <constraint firstItem="dGv-DJ-teu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6ry-JW-uAg"/>
                 <constraint firstAttribute="trailing" secondItem="ygg-Cd-xV5" secondAttribute="trailing" constant="30" id="8on-ha-3p0"/>
                 <constraint firstItem="Vk5-kX-S3q" firstAttribute="top" secondItem="ygg-Cd-xV5" secondAttribute="bottom" constant="16" id="B7T-Z4-b7V"/>
+                <constraint firstItem="ygg-Cd-xV5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BA7-sy-scN"/>
                 <constraint firstItem="ygg-Cd-xV5" firstAttribute="top" secondItem="szk-5H-CAG" secondAttribute="bottom" constant="11.5" id="Cjd-gn-19a"/>
                 <constraint firstItem="dGv-DJ-teu" firstAttribute="top" secondItem="Vk5-kX-S3q" secondAttribute="bottom" constant="14.5" id="Iqo-8E-ptJ"/>
                 <constraint firstItem="Vk5-kX-S3q" firstAttribute="centerX" secondItem="ygg-Cd-xV5" secondAttribute="centerX" id="Sqc-Uj-sU5"/>
@@ -68,6 +69,7 @@
                 <constraint firstItem="ZDg-Yz-uaa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hEt-jV-9VA"/>
                 <constraint firstItem="szk-5H-CAG" firstAttribute="centerX" secondItem="ZDg-Yz-uaa" secondAttribute="centerX" id="nhC-fF-6Xb"/>
                 <constraint firstItem="Vk5-kX-S3q" firstAttribute="width" secondItem="ygg-Cd-xV5" secondAttribute="width" id="pRh-Vg-GNA"/>
+                <constraint firstAttribute="bottom" secondItem="dGv-DJ-teu" secondAttribute="bottom" constant="26" id="wIf-Mt-xct"/>
                 <constraint firstItem="szk-5H-CAG" firstAttribute="top" secondItem="ZDg-Yz-uaa" secondAttribute="bottom" constant="8" id="wPq-4j-etx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -77,7 +79,7 @@
                 <outlet property="startExploringButton" destination="dGv-DJ-teu" id="Vgn-cZ-JnF"/>
                 <outlet property="usernameTextField" destination="ygg-Cd-xV5" id="W9E-eO-AQO"/>
             </connections>
-            <point key="canvasLocation" x="36.5" y="-71"/>
+            <point key="canvasLocation" x="-7.5" y="-71"/>
         </view>
     </objects>
 </document>

@@ -25,16 +25,12 @@ class LoginNib: GeneralNibView {
         startExploringButton.layer.cornerRadius = startExploringButton.frame.height/4
     }
     
-    func setup(textField: UITextField) {
-        textField.layer.borderWidth = 1.0
-        textField.layer.borderColor = UIColor.darkGray.cgColor
-        textField.layer.cornerRadius = textField.frame.height/4
-    }
-    
     //MARK: - Login Client Call
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let usernameText = usernameTextField.text, !usernameText.isEmpty, let passwordText = passwordTextField.text, !passwordText.isEmpty else {
+        guard let usernameText = getText(ofTextField: usernameTextField),
+        let passwordText = getText(ofTextField: passwordTextField)
+        else {
             errorLabel.text = "Please fill out both the username and password fields"
             return
         }
